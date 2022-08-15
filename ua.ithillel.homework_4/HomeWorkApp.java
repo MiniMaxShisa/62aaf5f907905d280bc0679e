@@ -52,7 +52,8 @@ public class HomeWorkApp {
     }
 
     public static boolean isTenToTwenty(int a, int b) {
-        return (a + b) >= 10 && (a + b) <= 20;
+        int c = a + b;
+        return c >= 10 && c <= 20;
     }
 
     public static void identifyNumber(int a) {
