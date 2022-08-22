@@ -35,14 +35,8 @@ public class Game {
                 System.out.println("Yep!");
             } else {
                 correctLetters = new StringBuilder("###############");
-                int minWord;
 
-                if (selectedWord.length() < playerWord.length()) {
-                    minWord = selectedWord.length();
-                } else {
-                    minWord = playerWord.length();
-                }
-                for (int i = 0; i < minWord; i++){
+                for (int i = 0; i < Math.min(selectedWord.length(), playerWord.length()); i++){
                     if (playerWord.charAt(i) == selectedWord.charAt(i)) {
                         correctLetters.setCharAt(i, playerWord.charAt(i));
                     }
